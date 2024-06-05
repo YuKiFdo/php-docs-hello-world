@@ -1,3 +1,4 @@
+<?php
 <?php include('includes/header.php'); ?>
 
     <div class="py-5" style="background-image: url('assets/image/pos.jpg'); background-size: cover;">
