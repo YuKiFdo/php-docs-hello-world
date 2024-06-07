@@ -1,17 +1,14 @@
 <?php
-try {
-    $conn = new PDO("sqlsrv:server = tcp:sakurampos.database.windows.net,1433; Database = sakurampos", "sakurampos", "{your_password_here}");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
+
+define('DB_SERVER',"sakurampos.mysql.database.azure.com");
+define('DB_USERNAME',"sakurampos");
+define('DB_PASSWORD',"Yasas1@22");
+define('DB_DATABASE',"dbsakura_mobile");
+
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+if(!$conn){
+    die("Connection Failed: ". mysqli_connect_error());
 }
 
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "sakurampos", "pwd" => "{your_password_here}", "Database" => "sakurampos", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:sakurampos.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-
-if (!$conn) {
-    die("Connection failed: " . print_r(sqlsrv_errors(), true));
-}
+?>
