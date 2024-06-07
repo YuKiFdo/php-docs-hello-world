@@ -1,17 +1,21 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require 'config/function.php'; // Ensure this path is correct
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-<?php include('includes/navbar.php'); // Ensure this path is correct ?>
-</body>
-</html>
+<?php include('includes/header.php'); ?>
+
+<div class="py-5" style="background-image: url('assets/image/pos.jpg'); background-size: cover;">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 py-5 text-center">
+
+
+                <?php alertMessage(); ?>
+
+                <h1 class="mt-3" style="color: white">Sakura Mobile</h1>
+
+                <?php if (!isset($_SESSION['loggedIn'])) : ?>
+                <a href="login.php" class="btn btn-primary mt-4">Login</a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include('includes/footer.php'); ?>
