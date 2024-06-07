@@ -13,5 +13,5 @@ $serverName = "tcp:sakurampos.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 if (!$conn) {
-    die("Connection Failed: " . mysqli_connect_error());
+    die("Connection failed: " . print_r(sqlsrv_errors(), true));
 }
