@@ -12,6 +12,6 @@ require 'config/function.php'; // Ensure this path is correct
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<?php include('navbar.php'); // Ensure this path is correct ?>
+<?php include('includes/navbar.php'); // Ensure this path is correct ?>
 </body>
 </html>
