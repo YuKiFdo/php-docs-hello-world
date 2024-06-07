@@ -1,7 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require 'config/function.php'; // Ensure this path is correct
+phpinfo()
 ?>
 <!DOCTYPE html>
 <html lang="en">
